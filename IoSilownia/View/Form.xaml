@@ -2,16 +2,19 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:cmd="clr-namespace:System.Windows.Input;assembly=PresentationCore"
+
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:vm="clr-namespace:IoSilownia.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="622"
              Style ="{StaticResource Page_Style}">
-    
+
     <UserControl.DataContext>
         <vm:FormVM/>
     </UserControl.DataContext>
-    
+
     <Grid>
         <Border CornerRadius="0,20,20,0">
             <Border.Background>
@@ -19,5 +22,25 @@
                             Stretch="fill"/>
             </Border.Background>
         </Border>
+
+        <Grid>
+            
+            <TextBlock Text="DATE : "
+                       Foreground="#DBDBDB"
+                       FontSize="12"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       FontFamily="/Fonts/#Rubik Medium"
+                       Margin="0,125,0,0"/>
+
+            <TextBlock Text="28.05.2023"
+                       Foreground="#CED565"
+                       FontSize="12"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Top"
+                       FontFamily="/Fonts/#Rubik Medium"
+                       Margin="0,125,205,0"/>
+        </Grid>
+        
     </Grid>
 </UserControl>

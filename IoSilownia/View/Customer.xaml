@@ -12,23 +12,42 @@
 
     <UserControl.DataContext>
         <vm:CustomerVM/>
-        
+
     </UserControl.DataContext>
     <Grid>
         <Border CornerRadius="0,20,20,0">
             <Border.Background>
                 <ImageBrush ImageSource="/Images/Klient.png"
                             Stretch="Fill"/>
-                
+
             </Border.Background>
         </Border>
         <TextBlock Text="Customer ID :"
                    Foreground="#DBDBDB"
                    FontSize="18"
-                   HorizontalAlignment="center"
+                   HorizontalAlignment="Left"
                    VerticalAlignment="Top"
                    FontFamily="/Fonts/#Rubik Medium"
-                   Margin="60,50,0,0"/>
-        
+                   Margin="269,48,0,0" Height="30" Width="114" RenderTransformOrigin="0.439,1"/>
+
+        <TextBox x:Name="txtSearch" Height="30" BorderBrush="Gray" BorderThickness="1" Background="Transparent" Margin="407,48,32,522" TextChanged="TextBox_TextChanged_1">
+            <TextBox.Resources>
+                <Style TargetType="TextBox">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TextBox">
+                                <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="10">
+                                    <ScrollViewer x:Name="PART_ContentHost"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+
+
+
     </Grid>
 </UserControl>

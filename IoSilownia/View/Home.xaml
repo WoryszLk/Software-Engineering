@@ -8,7 +8,7 @@
              d:DesignHeight="600" d:DesignWidth="622">
     <Grid>
         <Border CornerRadius="0,20,20,0">
-            <Border.Background CornerRadius ="0,20,20,0">
+            <Border.Background >
                 <ImageBrush ImageSource="/Images/Bocian.png"
                             
                                 Stretch="Fill"/>
