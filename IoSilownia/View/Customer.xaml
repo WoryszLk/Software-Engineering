@@ -16,7 +16,19 @@
     </UserControl.DataContext>
     <Grid>
         <Border CornerRadius="0,20,20,0">
-      
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/Klient.png"
+                            Stretch="Fill"/>
+                
+            </Border.Background>
         </Border>
+        <TextBlock Text="Customer ID :"
+                   Foreground="#DBDBDB"
+                   FontSize="18"
+                   HorizontalAlignment="center"
+                   VerticalAlignment="Top"
+                   FontFamily="/Fonts/#Rubik Medium"
+                   Margin="60,50,0,0"/>
+        
     </Grid>
 </UserControl>
