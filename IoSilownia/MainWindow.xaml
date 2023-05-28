@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:IoSilownia"
+        xmlns:vm="clr-namespace:IoSilownia.ViewModel"
+        xmlns:Menu="clr-namespace:IoSilownia.Utilities"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" 
         Width="850"
@@ -13,6 +14,10 @@
         Background="Transparent"
         
         >
+
+    <Window.DataContext>
+        <vm:NavigationVM/>
+    </Window.DataContext>
     <Grid>
         <!--//window Border //-->
         <Border Background="#212529"
@@ -21,11 +26,38 @@
         </Border>
         
         <Grid>
+
          <!--// Base grid// -->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="228"/>
                 <ColumnDefinition Width="622"/>
             </Grid.ColumnDefinitions>
+           <!-- Nav panel -->
+            <Grid HorizontalAlignment="Left"
+                  Width="228">
+                
+                <Border Background="#272B2f"
+                        CornerRadius="20,0,0,20"/>
+                <StackPanel Height="400"
+                            Width="228">
+                    <!--Home-->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding HomeCommand}"
+                              IsChecked="True">
+                        <Grid>
+                            
+                            <Image Source="/Images/img_home.png"
+                                   Style="{StaticResource Image_Style}"/>
+                            <TextBlock Text="Home"
+                                       Style="{StaticResource Text_Style}"/>
+                            
+                        </Grid>
+                       
+
+                    </Menu:Btn>
+
+                </StackPanel>
+            </Grid>
             
             
         </Grid>

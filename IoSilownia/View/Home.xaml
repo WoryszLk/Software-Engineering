@@ -9,7 +9,7 @@
     <Grid>
         <Border CornerRadius="0,20,20,0">
             <Border.Background >
-                <ImageBrush ImageSource="/Images/Bocian.png"
+                <ImageBrush ImageSource="/Images/Home.png"
                             
                                 Stretch="Fill"/>
                 

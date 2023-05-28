@@ -23,6 +23,10 @@ namespace IoSilownia
         public MainWindow()
         {
             InitializeComponent();
+
         }
+
+      
+
     }
 }

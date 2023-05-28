@@ -8,12 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
+    <None Remove="Images\dom.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Fonts\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="XperienceCommunity.PageNavigationRedirects" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\dom.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

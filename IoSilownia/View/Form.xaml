@@ -19,7 +19,7 @@
         <Border CornerRadius="0,20,20,0">
             <Border.Background>
                 <ImageBrush ImageSource="/images/Recepcja.png"
-                            Stretch="fill"/>
+                            Stretch="Fill"/>
             </Border.Background>
         </Border>
 

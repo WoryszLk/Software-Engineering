@@ -24,22 +24,25 @@ namespace IoSilownia.View
         {
             InitializeComponent();
             txtSearch.TextChanged += TxtSearch_TextChanged;
-
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void TxtSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            string searchText = txtSearch.Text;
+            // Przykładowa logika wyszukiwania
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                MessageBox.Show("Wyszukano: " + searchText);
+            }
         }
 
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
+            TextBox textBox = (TextBox)sender;
+            string searchText = textBox.Text;
+            // Wykonaj operacje wyszukiwania na podstawie wartości searchText
+            // Na przykład, zaktualizuj widok lub wykonaj inne odpowiednie działania.
+        }
 
-        }
-        private void TxtSearch_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            string searchText = txtSearch.Text;
-           
-        }
     }
 }
