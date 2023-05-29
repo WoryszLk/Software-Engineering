@@ -45,8 +45,8 @@
                               Command="{Binding HomeCommand}"
                               IsChecked="True">
                         <Grid>
-                            
-                            <Image Source="/Images/img_home.png"
+
+                            <Image Source="C:\Users\worys\Desktop\IO\GMS\IoSilownia\IoSilownia\Images\Home2.png"
                                    Style="{StaticResource Image_Style}"/>
                             <TextBlock Text="Home"
                                        Style="{StaticResource Text_Style}"/>
