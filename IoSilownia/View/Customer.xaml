@@ -17,7 +17,7 @@
     <Grid>
         <Border CornerRadius="0,20,20,0">
             <Border.Background>
-                <ImageBrush ImageSource="/Images/Klient.png"
+                <ImageBrush ImageSource="C:\Users\worys\Desktop\IO\GMS\IoSilownia\IoSilownia\Images\Klient.png"
                             Stretch="Fill"/>
 
             </Border.Background>

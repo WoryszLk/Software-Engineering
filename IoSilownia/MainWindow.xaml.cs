@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Navigation;
+using CMS.Ecommerce.AuthorizeNetDataContracts;
+using IoSilownia.Utilities;
 
 namespace IoSilownia
 {
@@ -30,6 +33,10 @@ namespace IoSilownia
             Close();
         }
 
+        private void Trener_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new Uri("/view/Customer.xaml", UriKind.Relative));
 
+        }
     }
 }
