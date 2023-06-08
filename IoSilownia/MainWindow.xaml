@@ -34,7 +34,8 @@
                 <Border Background="#272B2f" CornerRadius="20,0,0,20"/>
                 <StackPanel Height="400" Width="228">
                     <!--Home-->
-                    <Menu:Btn Style="{StaticResource BtnStyle}" Command="{Binding HomeCommand}" IsChecked="True">
+                    <Menu:Btn Style="{StaticResource BtnStyle}" Command="{Binding HomeCommand}" IsChecked="True"
+                             Cursor="Hand" Click="Homes_Click" >
                         <Grid>
                             <Image Source="C:\Users\worys\Desktop\IO\GMS\IoSilownia\IoSilownia\Images\Home2.png"
                                    Style="{StaticResource Image_Style}" Height="28.4415584415584"/>
@@ -43,7 +44,8 @@
                     </Menu:Btn>
 
                     <!-- Customer -->
-                    <Menu:Btn Style="{StaticResource BtnStyle}" Command="{Binding HomeCommand}">
+                    <Menu:Btn Style="{StaticResource BtnStyle}" Command="{Binding HomeCommand}"
+                               x:Name="Customer"   Cursor="Hand" Click="Customer_Click">
                         <Grid>
                             <Image Source="C:\Users\worys\Desktop\IO\GMS\IoSilownia\IoSilownia\Images\customer_menu.png"
                                    Style="{StaticResource Image_Style}" Height="28.4415584415584"/>
@@ -68,9 +70,32 @@
                             <Image Source="C:\Users\worys\Desktop\IO\GMS\IoSilownia\IoSilownia\Images\Trener_mn.png"
                                    Style="{StaticResource Image_Style}" Height="28.4415584415584"/>
                             <TextBlock Text="Trener" Style="{StaticResource Text_Style}"/>
+                      
+                            
+                            
                         </Grid>
+            
                     </Menu:Btn>
+
                 </StackPanel>
+
+                <Grid>
+                    <TextBox x:Name="txtDateTime" 
+             Background="Transparent"
+             HorizontalAlignment="Center" 
+             TextAlignment="Center"
+             VerticalAlignment="Top" 
+             FontSize="23" 
+             Margin="0,31,0,0" 
+             Width="228" 
+             Height="34" 
+             BorderBrush="#DBDBDB"
+             BorderThickness="1"
+             Foreground="#DBDBDB"
+             FontFamily="/Fonts/#Rubik" />
+                </Grid>
+
+
             </Grid>
 
             <!-- Frame -->
