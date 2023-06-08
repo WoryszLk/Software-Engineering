@@ -69,5 +69,7 @@ namespace IoSilownia
             MainFrame.Navigate(new Uri("/view/Customer.xaml", UriKind.Relative));
 
         }
+
+       
     }
 }
