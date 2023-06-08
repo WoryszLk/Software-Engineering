@@ -4,12 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:cmd="clr-namespace:System.Windows.Input;assembly=PresentationCore"
-
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:vm="clr-namespace:IoSilownia.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="622"
-             Style ="{StaticResource Page_Style}">
+             Style="{StaticResource Page_Style}">
 
     <UserControl.DataContext>
         <vm:FormVM/>
@@ -21,10 +20,15 @@
                 <ImageBrush ImageSource="C:\Users\worys\Desktop\IO\GMS\IoSilownia\IoSilownia\Images\Recepcja.png"
                             Stretch="Fill"/>
             </Border.Background>
+            <Border x:Name="borderOptions" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="300" Margin="40,260,0,0" VerticalAlignment="Top" Width="560">
+                <StackPanel>
+                    <Image x:Name="imgDostawca" Source="C:\Users\worys\Desktop\IO\GMS\IoSilownia\IoSilownia\Images\Dostawca_mn.png" Height="100" Visibility="Collapsed" HorizontalAlignment="Left"/>
+                    <Image x:Name="imgTechniczna" Source="C:\Users\worys\Desktop\IO\GMS\IoSilownia\IoSilownia\Images\Suppert_mn.png" Height="100" Visibility="Collapsed" HorizontalAlignment="Left"/>
+                </StackPanel>
+            </Border>
         </Border>
 
         <Grid>
-            
             <TextBlock Text="DATE : "
                        Foreground="#DBDBDB"
                        FontSize="12"
@@ -33,6 +37,18 @@
                        FontFamily="/Fonts/#Rubik Medium"
                        Margin="0,125,0,0"/>
 
+            <!--TextBox visible-->
+            <TextBox Text="Wybierz formularz"
+                     Foreground="#DBDBDB"
+                     FontSize="15"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"
+                     FontFamily="/Fonts/#Rubik Medium"
+                     Margin="282,55,0,0"
+                     Background="Transparent"
+                     BorderThickness="0"/>
+
+
             <TextBlock Text="28.05.2023"
                        Foreground="#CED565"
                        FontSize="12"
@@ -40,7 +56,98 @@
                        VerticalAlignment="Top"
                        FontFamily="/Fonts/#Rubik Medium"
                        Margin="0,125,205,0"/>
+
+            <!--Option for user -->
+
+            <ComboBox x:Name="cmbOptions"
+                      Background="Transparent"
+                      Foreground="Black"
+                      FontSize="12"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      FontFamily="/Fonts/#Rubik Medium"
+                      Margin="455,55,0,0"
+                      Width="126"
+                      SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBoxItem Content="Zaopatrzeniowiec"/>
+                <ComboBoxItem Content="Techniczna"/>
+            </ComboBox>
+
+            <!-- Zaopatrzeniowiec-->
+            <TextBox x:Name="txtZaopatrzeniowiec1"
+                     Text="Opis"
+                     TextAlignment="Center"
+                     Foreground="Black"
+                     FontSize="12"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"
+                     FontFamily="/Fonts/#Rubik Medium"
+                     Margin="60,410,0,0"
+                     Visibility="Collapsed" Height="115" Width="431" />
+
+            <TextBox x:Name="ilosc"
+                     Text="Podaj ilość"
+                     TextAlignment="Center"
+                     Background="Transparent"
+                     Foreground="#DBDBDB"
+                     FontSize="12"
+                       BorderThickness="0"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"
+                     FontFamily="/Fonts/#Rubik Medium"
+                     Margin="413,340,0,0"
+                     Visibility="Collapsed" 
+                     
+                    Height="20" Width="94" />
+
+         
+
+
+            <Button x:Name="btnZaopatrzeniowiec"                   
+                    Content="Wyslij"
+                    Foreground="Black"
+                    FontSize="12"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontFamily="/Fonts/#Rubik Medium"
+                    Margin="505,530,0,0"
+                    Visibility="Collapsed" 
+                    
+                    Height="20" Width="76"/>
+
+            <ComboBox x:Name="cmbOptions2_zp"
+                      Background="Transparent"
+                      Foreground="Black"
+                      FontSize="12"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Center"
+                      FontFamily="/Fonts/#Rubik Medium"
+                      Margin="444,0,0,0"
+                      Width="126"
+                      SelectionChanged="ComboBox_SelectionChanged"
+                      
+                      Visibility="Collapsed">
+                <ComboBoxItem Content="Mutex 1"/>
+                <ComboBoxItem Content="Lupex 2"/>
+            </ComboBox>
+
+            <TextBox x:Name="txtNumber_zp"
+         Text="0"
+         Foreground="Black"
+         FontSize="12"
+         HorizontalAlignment="Left"
+         VerticalAlignment="Top"
+         FontFamily="/Fonts/#Rubik Medium"
+         Width="40"
+         IsReadOnly="True"
+         TextAlignment="Center"
+         Visibility="Collapsed" Margin="530,340,0,0"/>
+
+
+
+
+
         </Grid>
-        
     </Grid>
+
 </UserControl>

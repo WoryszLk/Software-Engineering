@@ -24,5 +24,40 @@ namespace IoSilownia.View
         {
             InitializeComponent();
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cmbOptions.SelectedItem is ComboBoxItem selectedItem)
+            {
+                string selectedOption = selectedItem.Content.ToString();
+
+                // Ustawienie widoczności odpowiedniego zdjęcia
+                imgDostawca.Visibility = selectedOption == "Zaopatrzeniowiec" ? Visibility.Visible : Visibility.Collapsed;
+                txtZaopatrzeniowiec1.Visibility = selectedOption == "Zaopatrzeniowiec" ? Visibility.Visible : Visibility.Collapsed;
+                imgTechniczna.Visibility = selectedOption == "Techniczna" ? Visibility.Visible : Visibility.Collapsed;
+
+                ilosc.Visibility = selectedOption == "Zaopatrzeniowiec" ? Visibility.Visible : Visibility.Collapsed;
+                cmbOptions2_zp.Visibility = selectedOption == "Zaopatrzeniowiec" ? Visibility.Visible : Visibility.Collapsed;
+                btnZaopatrzeniowiec.Visibility = selectedOption == "Zaopatrzeniowiec" ? Visibility.Visible : Visibility.Collapsed;
+                txtNumber_zp.Visibility = selectedOption == "Zaopatrzeniowiec" ? Visibility.Visible : Visibility.Collapsed;
+            }
+            else
+            {
+                // Jeśli żadna opcja nie jest wybrana, ukryj wszystkie zdjęcia
+                imgDostawca.Visibility = Visibility.Collapsed;
+                imgTechniczna.Visibility = Visibility.Collapsed;
+                txtZaopatrzeniowiec1.Visibility = Visibility.Collapsed;
+                ilosc.Visibility = Visibility.Collapsed;
+                cmbOptions2_zp.Visibility = Visibility.Collapsed;
+                btnZaopatrzeniowiec.Visibility = Visibility.Collapsed;
+                txtNumber_zp.Visibility = Visibility.Collapsed;
+
+
+            }
+        }
+
+
+
+
     }
 }
