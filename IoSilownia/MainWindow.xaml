@@ -52,7 +52,8 @@
                     </Menu:Btn>
 
                     <!-- forms -->
-                    <Menu:Btn Style="{StaticResource BtnStyle}" Command="{Binding HomeCommand}">
+                    <Menu:Btn Style="{StaticResource BtnStyle}" Command="{Binding HomeCommand}"
+                              x:Name="Recepcja" Cursor="Hand" Click="Recepcja_Click">
                         <Grid>
                             <Image Source="C:\Users\worys\Desktop\IO\GMS\IoSilownia\IoSilownia\Images\Forms_mn.png"
                                    Style="{StaticResource Image_Style}" Height="28.4415584415584"/>

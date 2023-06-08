@@ -38,5 +38,11 @@ namespace IoSilownia
             MainFrame.Navigate(new Uri("/view/Customer.xaml", UriKind.Relative));
 
         }
+
+        private void Recepcja_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new Uri("/view/Form.xaml", UriKind.Relative));
+
+        }
     }
 }
