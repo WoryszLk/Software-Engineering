@@ -7,30 +7,32 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" 
              d:DesignWidth="622"
-  
              Style="{StaticResource Page_Style}">
 
     <UserControl.DataContext>
         <vm:CustomerVM/>
-
     </UserControl.DataContext>
+
     <Grid>
         <Border CornerRadius="0,20,20,0">
             <Border.Background>
                 <ImageBrush ImageSource="C:\Users\worys\Desktop\IO\GMS\IoSilownia\IoSilownia\Images\Klient.png"
                             Stretch="Fill"/>
-
             </Border.Background>
         </Border>
+
         <TextBlock Text="Customer ID :"
+                   x:Name="Text_boximp"
                    Foreground="#DBDBDB"
                    FontSize="18"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"
                    FontFamily="/Fonts/#Rubik Medium"
-                   Margin="269,48,0,0" Height="30" Width="114" RenderTransformOrigin="0.439,1"/>
+                   Margin="280,125,0,0" Height="30" Width="114" RenderTransformOrigin="0.439,1"
+                   Visibility="Collapsed"/>
 
-        <TextBox x:Name="txtSearch" Height="30" BorderBrush="Gray" BorderThickness="1" Background="Transparent" Margin="407,48,32,522" TextChanged="TextBox_TextChanged_1">
+        <TextBox x:Name="txtSearch" Height="30" BorderBrush="Gray" BorderThickness="1" Background="Transparent" Margin="415,125,24,445" TextChanged="TextBox_TextChanged_1"
+                 Visibility="Collapsed">
             <TextBox.Resources>
                 <Style TargetType="TextBox">
                     <Setter Property="Template">
@@ -46,8 +48,60 @@
             </TextBox.Resources>
         </TextBox>
 
+        <TextBlock Text="Wybierz opcję :"
+                   Foreground="#DBDBDB"
+                   FontSize="18"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   FontFamily="/Fonts/#Rubik Medium"
+                   Margin="280,55,0,0" Height="30" Width="160" RenderTransformOrigin="0.439,1"/>
 
+        <ComboBox x:Name="cmbUserActions"
+                  Background="Transparent"
+                  Foreground="Black"
+                  FontSize="12"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"
+                  FontFamily="/Fonts/#Rubik Medium"
+                  Margin="426,56,0,0"
+                  Width="162"
+                  SelectionChanged="cmbUserActions_SelectionChanged">
+            <ComboBoxItem Content="Dodaj użytkownika"/>
+            <ComboBoxItem Content="Usuń użytkownika"/>
+            <ComboBoxItem Content="Znajdź użytkownika"/>
+        </ComboBox>
 
+        <TextBlock Text="Name:"
+                   Foreground="#DBDBDB"
+                   FontSize="14"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   FontFamily="/Fonts/#Rubik Medium"
+                   Margin="70,0,0,0"
+                   x:Name="Text_Name"/>
 
+       
+
+        <TextBlock Text="Last name:"
+                   Foreground="#DBDBDB"
+                   FontSize="14"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   FontFamily="/Fonts/#Rubik Medium"
+                   Margin="70,330,0,0"
+                   x:Name="Text_LastName"/>
+
+       
+
+        <TextBlock Text="Birthdate:"
+                   Foreground="#DBDBDB"
+                   FontSize="14"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   FontFamily="/Fonts/#Rubik Medium"
+                   Margin="70,370,0,0"
+                   x:Name="Text_Brth"/>
+
+        
     </Grid>
 </UserControl>

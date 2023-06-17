@@ -44,5 +44,33 @@ namespace IoSilownia.View
             // Na przykład, zaktualizuj widok lub wykonaj inne odpowiednie działania.
         }
 
+        private void cmbUserActions_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cmbUserActions.SelectedItem as ComboBoxItem != null)
+            {
+                string selectedAction = (cmbUserActions.SelectedItem as ComboBoxItem).Content.ToString();
+
+                if (selectedAction == "Usuń użytkownika" || selectedAction == "Znajdź użytkownika")
+                {
+                    Text_boximp.Visibility = Visibility.Visible;
+                    Text_Name.Visibility = Visibility.Visible;
+                    Text_LastName.Visibility = Visibility.Visible;
+                    Text_Brth.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    Text_boximp.Visibility = Visibility.Collapsed;
+                    Text_Name.Visibility = Visibility.Collapsed;
+                    Text_LastName.Visibility = Visibility.Collapsed;
+                    Text_Brth.Visibility= Visibility.Collapsed;
+                }
+            }
+        }
+
+
+
+
+
+
     }
 }
