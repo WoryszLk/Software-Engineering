@@ -100,7 +100,7 @@
                      
                     Height="20" Width="94" />
 
-         
+
 
 
             <Button x:Name="btnZaopatrzeniowiec"                   
@@ -143,8 +143,28 @@
          TextAlignment="Center"
          Visibility="Collapsed" Margin="530,340,0,0"/>
 
+            <!-- Obsługa techniczna -->
+            <TextBox x:Name="txt_dla_zaop1"
+         Text="Opis"
+         TextAlignment="Center"
+         Foreground="Black"
+         FontSize="12"
+         HorizontalAlignment="Left"
+         VerticalAlignment="Top"
+         FontFamily="/Fonts/#Rubik Medium"
+         Margin="65,365,0,0"
+         Visibility="Collapsed" Height="165" Width="380" />
 
-
+            <Button x:Name="btn_wyslij_zaop"                   
+        Content="Wyslij"
+        Foreground="Black"
+        FontSize="12"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top"
+        FontFamily="/Fonts/#Rubik Medium"
+        Margin="505,530,0,0"
+        Visibility="Collapsed" 
+        Height="20" Width="76"/>
 
 
         </Grid>

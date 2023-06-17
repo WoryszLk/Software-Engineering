@@ -34,12 +34,16 @@ namespace IoSilownia.View
                 // Ustawienie widoczności odpowiedniego zdjęcia
                 imgDostawca.Visibility = selectedOption == "Zaopatrzeniowiec" ? Visibility.Visible : Visibility.Collapsed;
                 txtZaopatrzeniowiec1.Visibility = selectedOption == "Zaopatrzeniowiec" ? Visibility.Visible : Visibility.Collapsed;
-                imgTechniczna.Visibility = selectedOption == "Techniczna" ? Visibility.Visible : Visibility.Collapsed;
 
                 ilosc.Visibility = selectedOption == "Zaopatrzeniowiec" ? Visibility.Visible : Visibility.Collapsed;
                 cmbOptions2_zp.Visibility = selectedOption == "Zaopatrzeniowiec" ? Visibility.Visible : Visibility.Collapsed;
                 btnZaopatrzeniowiec.Visibility = selectedOption == "Zaopatrzeniowiec" ? Visibility.Visible : Visibility.Collapsed;
                 txtNumber_zp.Visibility = selectedOption == "Zaopatrzeniowiec" ? Visibility.Visible : Visibility.Collapsed;
+                //obsługa techniczna 
+                txt_dla_zaop1.Visibility = selectedOption == "Techniczna" ? Visibility.Visible : Visibility.Collapsed;
+                btn_wyslij_zaop.Visibility = selectedOption == "Techniczna" ? Visibility.Visible : Visibility.Collapsed;
+                imgTechniczna.Visibility = selectedOption == "Techniczna" ? Visibility.Visible : Visibility.Collapsed;
+
             }
             else
             {
