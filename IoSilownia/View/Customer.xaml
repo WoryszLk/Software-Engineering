@@ -70,7 +70,7 @@
             <ComboBoxItem Content="Usuń użytkownika"/>
             <ComboBoxItem Content="Znajdź użytkownika"/>
         </ComboBox>
-                                    <!--Dodaj/Usuń użytkownika-->
+        <!--Dodaj/Usuń użytkownika-->
         <TextBlock Text="Name:"
                    Foreground="#DBDBDB"
                    FontSize="14"
@@ -81,7 +81,12 @@
                    x:Name="Text_Name"
                     Visibility="Collapsed"/>
 
-       
+        <TextBox x:Name="txtFirstName" 
+                 Height="30" BorderBrush="Gray" 
+                 BorderThickness="1" Background="Transparent" 
+                 Margin="130,285,78,285" Visibility="Collapsed"
+                 />
+
 
         <TextBlock Text="Last name:"
                    Foreground="#DBDBDB"
@@ -89,11 +94,16 @@
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"
                    FontFamily="/Fonts/#Rubik Medium"
-                   Margin="70,330,0,0"
+                   Margin="70,355,0,0"
                    x:Name="Text_LastName"
                     Visibility="Collapsed"/>
 
-       
+        <TextBox x:Name="txtLastName" Height="30" 
+                 BorderBrush="Gray" BorderThickness="1" 
+                 Background="Transparent" Margin="156,348,60,222" 
+                 Visibility="Collapsed"/>
+
+
 
         <TextBlock Text="Birthdate:"
                    Foreground="#DBDBDB"
@@ -101,10 +111,34 @@
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"
                    FontFamily="/Fonts/#Rubik Medium"
-                   Margin="70,370,0,0"
+                   Margin="70,415,0,0"
                    x:Name="Text_Brth"
                    Visibility="Collapsed"/>
 
+        <DatePicker x:Name="datePickerBirthdate" 
+                    Margin="156,415,207,145" 
+                    Visibility="Collapsed"
+                    BorderThickness="0"/>
         
+        <Button Content="Dodaj" 
+                HorizontalAlignment="Left"
+                Margin="507,525,0,0" 
+                VerticalAlignment="Top"
+                Visibility="Collapsed"
+                x:Name="ADD_button" Width="73"/>
+
+        <Button Content="Generuj raport"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top"
+        FontFamily="/Fonts/#Rubik Medium"
+        Margin="455,520,0,0"
+        Width="120"
+        Height="30"
+        Click="GenerateReportButton_Click"
+        Visibility="Collapsed"
+        x:Name="Generate_rap"/>
+
+
+
     </Grid>
 </UserControl>

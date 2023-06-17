@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -66,15 +67,52 @@ namespace IoSilownia.View
                     Text_Name.Visibility = Visibility.Visible;
                     Text_LastName.Visibility = Visibility.Visible;
                     Text_Brth.Visibility = Visibility.Visible;
+                    txtFirstName.Visibility = Visibility.Visible;
+                    txtLastName.Visibility = Visibility.Visible;
+                    datePickerBirthdate.Visibility = Visibility.Visible;
                 }
                 else
                 {
                     Text_Name.Visibility = Visibility.Collapsed;
                     Text_LastName.Visibility = Visibility.Collapsed;
                     Text_Brth.Visibility = Visibility.Collapsed;
+                    txtFirstName.Visibility = Visibility.Collapsed;
+                    txtLastName.Visibility = Visibility.Collapsed;
+                    datePickerBirthdate.Visibility  = Visibility.Collapsed;
+
+
+
+                }
+
+                if (selectedAction == "Dodaj użytkownika")
+                {
+                    ADD_button.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    ADD_button.Visibility = Visibility.Collapsed;
+                }
+
+                if(selectedAction == "Znajdź użytkownika")
+                {
+                    Generate_rap.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    Generate_rap.Visibility= Visibility.Collapsed;
                 }
             }
         }
+
+        private void GenerateReportButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Ścieżka do pliku txt
+            string filePath = "C:\\Users\\worys\\Desktop\\wnioski.txt";
+
+            // Otwarcie pliku txt
+            Process.Start("notepad.exe", filePath);
+        }
+
 
 
 
