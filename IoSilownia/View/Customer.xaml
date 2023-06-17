@@ -70,7 +70,7 @@
             <ComboBoxItem Content="Usuń użytkownika"/>
             <ComboBoxItem Content="Znajdź użytkownika"/>
         </ComboBox>
-
+                                    <!--Dodaj/Usuń użytkownika-->
         <TextBlock Text="Name:"
                    Foreground="#DBDBDB"
                    FontSize="14"
@@ -78,7 +78,8 @@
                    VerticalAlignment="Center"
                    FontFamily="/Fonts/#Rubik Medium"
                    Margin="70,0,0,0"
-                   x:Name="Text_Name"/>
+                   x:Name="Text_Name"
+                    Visibility="Collapsed"/>
 
        
 
@@ -89,7 +90,8 @@
                    VerticalAlignment="Top"
                    FontFamily="/Fonts/#Rubik Medium"
                    Margin="70,330,0,0"
-                   x:Name="Text_LastName"/>
+                   x:Name="Text_LastName"
+                    Visibility="Collapsed"/>
 
        
 
@@ -100,7 +102,8 @@
                    VerticalAlignment="Top"
                    FontFamily="/Fonts/#Rubik Medium"
                    Margin="70,370,0,0"
-                   x:Name="Text_Brth"/>
+                   x:Name="Text_Brth"
+                   Visibility="Collapsed"/>
 
         
     </Grid>

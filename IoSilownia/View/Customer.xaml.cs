@@ -53,19 +53,29 @@ namespace IoSilownia.View
                 if (selectedAction == "Usuń użytkownika" || selectedAction == "Znajdź użytkownika")
                 {
                     Text_boximp.Visibility = Visibility.Visible;
+                    txtSearch.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    Text_boximp.Visibility = Visibility.Collapsed;
+                    txtSearch.Visibility = Visibility.Collapsed;
+                }
+
+                if (selectedAction == "Dodaj użytkownika" || selectedAction == "Znajdź użytkownika")
+                {
                     Text_Name.Visibility = Visibility.Visible;
                     Text_LastName.Visibility = Visibility.Visible;
                     Text_Brth.Visibility = Visibility.Visible;
                 }
                 else
                 {
-                    Text_boximp.Visibility = Visibility.Collapsed;
                     Text_Name.Visibility = Visibility.Collapsed;
                     Text_LastName.Visibility = Visibility.Collapsed;
-                    Text_Brth.Visibility= Visibility.Collapsed;
+                    Text_Brth.Visibility = Visibility.Collapsed;
                 }
             }
         }
+
 
 
 
