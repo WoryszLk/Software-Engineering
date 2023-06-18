@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.SignalR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,31 @@ namespace IoSilownia.View
         public Training()
         {
             InitializeComponent();
+        }
+
+
+        private void combo_opt_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (combo_opt.SelectedItem is ComboBoxItem selectedItem)
+            {
+                string selectedOption = selectedItem.Content.ToString();
+
+                // Sprawdzenie wybranej opcji
+                if (selectedOption == "Silownia" || selectedOption == "Sztuki walki" || selectedOption == "Fitness")
+                {
+                    Trener_txt.Visibility = Visibility.Visible;
+                    trener_ch.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    Trener_txt.Visibility = Visibility.Collapsed;
+                    trener_ch.Visibility = Visibility.Collapsed;
+                }
+            }
+            else
+            {
+                
+            }
         }
     }
 }
